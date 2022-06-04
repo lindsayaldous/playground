@@ -1,114 +1,40 @@
 <html>
 <head>
-  
-  <!-- Re-using the HTML/CSS from pl2 for the textbox with slight modifications to style -->
-  <!-- Started with the HTML/JS for the Display a Web Map tutorial, then:
-	- swapped out web map for Canada map created for a previous week 6 checklist item
-	- removed legend widget because it sort of defeated the "click around and view the province names" idea
-	- changed default scale to use metric units and take on the "ruler" style
-	- tried adding a compass widget but it wasn't co-operating
-	- add textbox using the same HTML/CSS from a pl2 page with slight modifications to style -->
-  
+    
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Canada</title>
+  <title>Leaflet.js Test</title>
 
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-	   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-	   crossorigin=""/>
-	
-  <style>
-    html, body, #viewDiv {
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      width: 100%;
-	  }
-        #title{
-          position: absolute;
-          top: 60px;
-          left: 60px;
-          z-index: 5;
-          background-color: #570000;
-          color: #FFFFFF;
-          padding-right: 15px;
-          text-align: center;
-          font-family: "Verdana";
-          line-height: 25px;
-          padding-left: 15px;
-          max-width: 350px;
-        }
-        #text{
-          line-height: 6px;
-        }
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+  integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+  crossorigin=""/>
+
+	<style>
+	  	#map { height: 180px; }
+	</style>
+
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+  integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+  crossorigin=""></script>
+
+	<script>
 		
-		h1 {
-		  font-size: 20px;
-		  padding: 15px;
-		}
-	  	p {
-		  font-size: 15px;
-	  	}
-      
-  </style>
-  <link rel="stylesheet" href="https://js.arcgis.com/4.22/esri/themes/light/main.css">
-  <script src="https://js.arcgis.com/4.22/"></script>
+		var map = L.map('map').setView([51.505, -0.09], 13);
+		
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap'
+}).addTo(map);
 
-	<!-- Make sure you put this AFTER Leaflet's CSS -->
-	 <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-	   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-	   crossorigin=""></script>
+	</script>
 	
-  <script>
-    require([
-      "esri/config",
-      "esri/WebMap",
-      "esri/views/MapView",
-      "esri/widgets/ScaleBar",
-      "esri/widgets/Legend",
-      "esri/widgets/Compass"
-    ], function(esriConfig, WebMap, MapView, ScaleBar, Legend, Compass) {
-
-    esriConfig.apiKey = "AAPK9a43d3eaf123489784647347e640569eGXYwCDUuhfNCGI7nSfoXxH_M_ejNgJIgn-4gIl2e-QmOFYs8vhDF4QmyV6VVTbBE";
-
-      const webmap = new WebMap({
-        portalItem: {
-          id: "f385771d9d4e4d4aab685d0caa950a3d"
-        }
-      });
-
-      const view = new MapView({
-        container: "viewDiv",
-        map: webmap
-
-      });
-
-      const scalebar = new ScaleBar({
-        view: view,
-	unit: "metric",
-	style: "ruler"
-      });
-      view.ui.add(scalebar, "bottom-left");
-          
-	const compassWidget = new Compass({
-	  view: view
-	});
-      view.ui.add(compassWidget, "top-left");
-	    
-  });
-  </script>
 </head>
+	
 <body>
-      <div id="title">
-	      <h1>Les provinces et territoires du Canada / <br> Canada's Provinces and Territories</h1>
-	      <p> Canada est un pays avec dix provinces et trois territoires. Cliquez sur la carte pour 
-		voir une fenêtre avec leurs noms officiels en français et anglais!</p>
-	       <p> Canada is a country with ten provinces and three territories. Try clicking 
-		on the map to see a pop-up with their official French and English names! </p>
-      <div id="text">
-      </div>
-    </div>
-    <div id="webmap"></div>
-    <div id="viewDiv"></div>
+	
+      <div id="map"></div>
+	
 </body>
+	
 </html>
