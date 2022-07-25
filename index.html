@@ -50,7 +50,6 @@ to indicate places I'ved worked:
 		["Municipality of Kincardine", 44.2051, -81.5999]
 	];
 
-	// centre map over ~central region of Canada
 	var map = L.map('map').setView([47.9846, -91.5055], 5);
 
 	var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -64,7 +63,7 @@ to indicate places I'ved worked:
 
 	//https://stackoverflow.com/questions/42968243/how-to-add-multiple-markers-in-leaflet-js
 	for (var i = 0; i < locations.length; i++) {
-		marker = new L.marker([locations[i][1], locations[i][2]])
+		marker = new L.marker([locations[i][1], locations[i][2]], {alt:[i][0]})
 			.bindPopup(locations[i][0])
 			.addTo(map);
 	}
