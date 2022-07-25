@@ -34,7 +34,6 @@
 
 
 <div id="map"></div>
-<!-- <div id="map" style="width: 600px; height: 400px;"></div> -->
 
 <!-- idea: similar to exercise for the fall web class, make map with points
 to indicate places I'ved worked:
@@ -43,7 +42,7 @@ to indicate places I'ved worked:
 <script>
 
 	var locations = [
-		["UWaterloo Math", 43.4723, -80.5449],
+		["<b>UWaterloo Math</b>", 43.4723, -80.5449],
 		["BioLiNE Corp", 42.8657, -81.8942],
 		["AAFC IH Research Farm", 50.5327, -103.6516],
 		["Canadian Wildlife Service", 45.3166, -75.6909],
@@ -60,18 +59,15 @@ to indicate places I'ved worked:
 	// marker to help with centring map
 	// var marker = L.marker([47.9846, -91.5055]).addTo(map);
 
-
 	//https://stackoverflow.com/questions/42968243/how-to-add-multiple-markers-in-leaflet-js
 	for (var i = 0; i < locations.length; i++) {
 		marker = new L.marker([locations[i][1], locations[i][2]], {alt:'Location marker'})
 			.bindPopup(locations[i][0])
 			.addTo(map);
+		// third suggestion on this thread:
+		// https://stackoverflow.com/questions/23567203/leaflet-changing-marker-color
 		marker._icon.classList.add("huechange");
 	}
-
-	// third suggestion from:
-	// https://stackoverflow.com/questions/23567203/leaflet-changing-marker-color
-	// marker._icon.classList.add("huechange");
 
 </script>
 
