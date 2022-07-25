@@ -32,19 +32,18 @@
 
 <body>
 
+<!-- depending on how this map fits into the site, could add second layer of 
+point locations for school? UoG and Fleming, different colour markers,
+name of institution, name of program, time of completion-->
 
 <div id="map"></div>
-
-<!-- idea: similar to exercise for the fall 2021 web class, make map with points
-to indicate places I'ved worked:
-- pop-up for name of organization + months/years-->
 	
 <script>
 
 	var locations = [
-		["<b>UWaterloo Math</b><br>Event & Communications Assistant<br>___ 2016, ___ 2017", 43.4723, -80.5449],
+		["<b>University of Waterloo</b><br>Event & Communications Assistant<br>___ 2016, ___ 2017", 43.4723, -80.5449],
 		["<b>BioLiNE Corp</b><br>Processing Plant Operator & Research Assistant<br>Jan - Apr 2018", 42.8657, -81.8942],
-		["<b>AAFC IH Research Farm</b><br>Agronomy Research Assistant<br>Sept - Dec 2018", 50.5327, -103.6516],
+		["<b>Agriculture & Agri-Food Canada</b><br>Agronomy Research Assistant<br>Sept - Dec 2018", 50.5327, -103.6516],
 		["<b>Canadian Wildlife Service</b><br>Wildlife Permits Assistant<br>May - Aug 2019", 45.3166, -75.6909],
 		["<b>Municipality of Kincardine</b><br>GIS Student<br>May - Aug 2021", 44.2051, -81.5999]
 	];
@@ -64,10 +63,12 @@ to indicate places I'ved worked:
 		marker = new L.marker([locations[i][1], locations[i][2]], {alt:'Location marker'})
 			.bindPopup(locations[i][0])
 			.addTo(map);
-		// third suggestion on this thread:
+		// adjust colour of markers with third suggestion from this thread:
 		// https://stackoverflow.com/questions/23567203/leaflet-changing-marker-color
 		marker._icon.classList.add("huechange");
 	}
+
+// consider adjustments from here? http://melmo.github.io/accessibility/code/dist/leaflet.html
 
 </script>
 
