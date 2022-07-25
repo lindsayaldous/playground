@@ -63,7 +63,7 @@ to indicate places I'ved worked:
 
 	//https://stackoverflow.com/questions/42968243/how-to-add-multiple-markers-in-leaflet-js
 	for (var i = 0; i < locations.length; i++) {
-		marker = new L.marker([locations[i][1], locations[i][2]], {alt:[i][0]})
+		marker = new L.marker([locations[i][1], locations[i][2]], {alt:'Location marker'})
 			.bindPopup(locations[i][0])
 			.addTo(map);
 	}
