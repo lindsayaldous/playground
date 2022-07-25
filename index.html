@@ -54,20 +54,33 @@ to indicate places I'ved worked:
 	// marker to help with centring map
 	// var marker = L.marker([47.9846, -91.5055]).addTo(map);
 
-	// UW Math
-	var uwMarker = L.uwMarker([43.4723, 80.5449]).addTo(map);
+	var locations = [
+		["UW", 43.4723, 80.5449],
+		["BioLiNE", 42.8657, -81.8942]
+	]
 
-	// BioLiNE
-	var bioMarker = L.bioMarker([42.8657, -81.8942]).addTo(map);
+	//https://stackoverflow.com/questions/42968243/how-to-add-multiple-markers-in-leaflet-js
+	for (var i = 0; i < locations.length; i++) {
+		marker = new L.marker([locations[i][1], location[i][2]])
+			.bindPopup(locations[i][0])
+			.addTo(map);
+	}
+
+	// // UW Math
+	// var uwMarker = L.marker([43.4723, 80.5449]).addTo(map);
+
+	// // BioLiNE
+	// var bioMarker = L.marker([42.8657, -81.8942]).addTo(map);
 	
 	// // AAFC IHARF
 	// var aafcMarker = L.marker([50.5327, -103.6516]).addTo(map);
 
 	// // ECCC CWS
-	// var cwsMarker = L.marker([47.9846, -95.5055]).addTo(map);
+	// var cwsMarker = L.marker([45.3166, -75.6909]).addTo(map);
 
 	// // MOK
-	// var mokMarker = L.marker([47.9846, -95.5055]).addTo(map);
+	// var mokMarker = L.marker([44.2051, -81.5999]).addTo(map);
+	
 
 </script>
 
