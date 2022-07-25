@@ -66,9 +66,12 @@ to indicate places I'ved worked:
 		marker = new L.marker([locations[i][1], locations[i][2]], {alt:'Location marker'})
 			.bindPopup(locations[i][0])
 			.addTo(map);
+		marker._icon.classList.add("huechange");
 	}
 
-	marker._icon.classList.add("huechange");
+	// third suggestion from:
+	// https://stackoverflow.com/questions/23567203/leaflet-changing-marker-color
+	// marker._icon.classList.add("huechange");
 
 </script>
 
