@@ -43,13 +43,15 @@ to indicate places I'ved worked:
 <script>
 
 	// centre map over ~central region of Canada
-	var map = L.map('map').setView([47.9846, -103.5055], 5);
+	var map = L.map('map').setView([47.9846, -100.5055], 5);
 
 
 	var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(map);
+
+	var marker = L.marker([47.9846, -101.5055]).addTo(map);
 
 </script>
 
