@@ -43,7 +43,7 @@ to indicate places I'ved worked:
 <script>
 
 	var locations = [
-		["UW", 43.4723, 80.5449],
+		["UW", 43.4723, -80.5449],
 		["BioLiNE", 42.8657, -81.8942]
 	];
 
@@ -61,7 +61,7 @@ to indicate places I'ved worked:
 
 	//https://stackoverflow.com/questions/42968243/how-to-add-multiple-markers-in-leaflet-js
 	for (var i = 0; i < locations.length; i++) {
-		marker = new L.marker([locations[i][1], location[i][2]])
+		marker = new L.marker([locations[i][1], locations[i][2]])
 			.bindPopup(locations[i][0])
 			.addTo(map);
 	}
