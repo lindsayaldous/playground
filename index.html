@@ -42,9 +42,13 @@ to indicate places I'ved worked:
 	
 <script>
 
+	var locations = [
+		["UW", 43.4723, 80.5449],
+		["BioLiNE", 42.8657, -81.8942]
+	];
+
 	// centre map over ~central region of Canada
 	var map = L.map('map').setView([47.9846, -91.5055], 5);
-
 
 	var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
@@ -54,10 +58,6 @@ to indicate places I'ved worked:
 	// marker to help with centring map
 	// var marker = L.marker([47.9846, -91.5055]).addTo(map);
 
-	var locations = [
-		["UW", 43.4723, 80.5449],
-		["BioLiNE", 42.8657, -81.8942]
-	]
 
 	//https://stackoverflow.com/questions/42968243/how-to-add-multiple-markers-in-leaflet-js
 	for (var i = 0; i < locations.length; i++) {
