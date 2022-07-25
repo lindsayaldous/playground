@@ -34,10 +34,17 @@
 
 <div id="map"></div>
 <!-- <div id="map" style="width: 600px; height: 400px;"></div> -->
+
+<!-- idea: similar to exercise for the fall web class, make map with points
+to indicate places I'ved worked:
+- pop-up for name of organization + months/years
+- set location as town centre? for each place-->
 	
 <script>
 
-	var map = L.map('map').setView([51.505, -0.09], 13);
+	// centre map over ~central region of Canada
+	var map = L.map('map').setView([47.9846, -89.5055], 4);
+
 
 	var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
