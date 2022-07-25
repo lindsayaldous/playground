@@ -24,6 +24,7 @@
 			max-height: 100%;
 		} */
 		#map { height: 600px; }
+		img.huechange { filter: hue-rotate(120deg);}
 	</style>
 
 	
@@ -37,8 +38,7 @@
 
 <!-- idea: similar to exercise for the fall web class, make map with points
 to indicate places I'ved worked:
-- pop-up for name of organization + months/years
-- set location as town centre? for each place-->
+- pop-up for name of organization + months/years-->
 	
 <script>
 
@@ -68,10 +68,9 @@ to indicate places I'ved worked:
 			.addTo(map);
 	}
 
-</script>
+	marker._icon.classList.add("huechange");
 
-<!-- after rough map ready, make alterations based on Accessible maps tutorial -->
-<!-- then look into layer groups and layer control? -->
+</script>
 
 </body>
 
