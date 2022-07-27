@@ -55,7 +55,8 @@
             "Education": eduLocations
         };
 
-        var layerControl = L.control.layers(overlayMaps).addTo(map);
+        // null for baseMaps argument ensures multi-select option
+        var layerControl = L.control.layers(null, overlayMaps).addTo(map);
 
 	</script>
 
