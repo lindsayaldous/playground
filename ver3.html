@@ -46,35 +46,16 @@
             layers: [workLocations, eduLocations]
         });
 
-        workLocations._icon.classList.add("huechange1");
-        eduLocations._icon.classList.add("huechange2");
-
 		var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			maxZoom: 10,
 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 		}).addTo(map);
 
+        workLocations._icon.classList.add("huechange1");
+        eduLocations._icon.classList.add("huechange2");
+
 		// marker to help with centring map
 		// var marker = L.marker([47.9846, -91.5055]).addTo(map);
-
-		// //https://stackoverflow.com/questions/42968243/how-to-add-multiple-markers-in-leaflet-js
-		// for (var i = 0; i < locations.length; i++) {
-		// 	marker = new L.marker([locations[i][1], locations[i][2]], {alt:'Location marker'})
-		// 		.bindPopup(locations[i][0])
-		// 		.addTo(map);
-		// 	// adjust colour of markers with third suggestion from this thread:
-		// 	// https://stackoverflow.com/questions/23567203/leaflet-changing-marker-color
-		// 	// marker._icon.classList.add("huechange");
-
-            // setting hue change according to type of location - education vs. work experience
-            // if (locations[i][3] == 1) {
-            //     marker._icon.classList.add("huechange1");
-            // } else {
-            //     marker._icon.classList.add("huechange2");
-            // }
-		//}
-
-	// consider adjustments from here? http://melmo.github.io/accessibility/code/dist/leaflet.html
 
 	</script>
 
