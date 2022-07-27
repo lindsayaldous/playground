@@ -14,15 +14,14 @@
 
 	<style>
 		#map { height: 600px; }
-		img.huechange1 { filter: hue-rotate(54deg);}
-        img.huechange2 { filter: hue-rotate(14deg);}
 	</style>
 
 </head>
 
 <body>
 
-	<!-- Version with layer groups for work experience vs. education locations -->
+	<!-- Version with layer groups for work experience vs. education locations 
+    (includes layer control option but not different coloured markers for different location types)-->
 
 	<div id="map"></div>
 		
@@ -51,11 +50,12 @@
 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 		}).addTo(map);
 
-        workLocations._icon.classList.add("huechange1");
-        eduLocations._icon.classList.add("huechange2");
+        var overlayMaps = {
+            "Experience": workLocations,
+            "Education": eduLocations
+        };
 
-		// marker to help with centring map
-		// var marker = L.marker([47.9846, -91.5055]).addTo(map);
+        var layerControl = L.control.layers(overlayMaps).addTo(map);
 
 	</script>
 
