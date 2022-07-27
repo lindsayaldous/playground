@@ -34,8 +34,8 @@
             CWS  = L.marker([45.3166, -75.6909]).bindPopup('<b>Canadian Wildlife Service</b><br>Wildlife Permits Assistant'),
             MoK  = L.marker([44.2051, -81.5999]).bindPopup('<b>Municipality of Kincardine</b><br>GIS Student'),
             YR   = L.marker([44.0485, -79.4799]).bindPopup('<b>Regional Municipality of York</b><br>Fleming GIS Collaborative Project'),
-            UoG   = L.marker([43.5327, -80.2262]).bindPopup('<b>University of Guelph</b><br>Bachelor of Science in Environmental Sciences<br>Major: Environment & Resource Management'),
-            SSFC   = L.marker([44.3410, -78.7412]).bindPopup('<b>Fleming College</b><br>Graduate Certificate in Geographic Information Systems (GIS)<br>Stream: Applications Specialist');
+            UoG  = L.marker([43.5327, -80.2262]).bindPopup('<b>University of Guelph</b><br>Bachelor of Science in Environmental Sciences<br>Major: Environment & Resource Management'),
+            SSFC = L.marker([44.3410, -78.7412]).bindPopup('<b>Fleming College</b><br>Graduate Certificate in Geographic Information Systems (GIS)<br>Stream: Applications Specialist');
 
         var workLocations = L.layerGroup([UW, Bio, AAFC, CWS, MoK, YR]);
         var eduLocations = L.layerGroup([UoG, SSFC]);
@@ -62,6 +62,13 @@
 		// 	// adjust colour of markers with third suggestion from this thread:
 		// 	// https://stackoverflow.com/questions/23567203/leaflet-changing-marker-color
 		// 	// marker._icon.classList.add("huechange");
+
+            // now need to set hue change by layer group variable? how to do this properly?
+            if (workLocations) {
+                marker._icon.classList.add("huechange1");
+            } else {
+                marker._icon.classList.add("huechange2");
+            }
 
             // setting hue change according to type of location - education vs. work experience
             // if (locations[i][3] == 1) {
