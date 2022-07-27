@@ -33,12 +33,8 @@
 
 <body>
 
-	<!-- depending on how this map fits into the site, could add second layer of 
-	point locations for school? UoG and Fleming, different colour markers,
-	name of institution, name of program, time of completion-->
-
-	<!-- maybe add to var locations with indication or work or school experience, then use that [i][3]
-	to adjust huechange-->
+	<!-- Version with type attribute in locations variable & conditional statement to set hue change
+    (See ver3.html (to be created) for attempt with Leaflet.js layer groups) -->
 
 	<div id="map"></div>
 		
@@ -72,7 +68,14 @@
 				.addTo(map);
 			// adjust colour of markers with third suggestion from this thread:
 			// https://stackoverflow.com/questions/23567203/leaflet-changing-marker-color
-			marker._icon.classList.add("huechange2");
+			// marker._icon.classList.add("huechange2");
+
+            // the rough logic:
+            if (locations[i][3] == 1) {
+                marker.icon.classList.add("huechange1");
+            } else {
+                marker.icon.classList.add("huechange2");
+            }
 		}
 
 	// consider adjustments from here? http://melmo.github.io/accessibility/code/dist/leaflet.html
