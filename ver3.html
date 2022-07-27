@@ -18,7 +18,6 @@
         img.huechange2 { filter: hue-rotate(14deg);}
 	</style>
 
-	
 </head>
 
 <body>
@@ -34,18 +33,17 @@
             AAFC = L.marker([50.5327, -103.6516]).bindPopup('<b>Agriculture & Agri-Food Canada</b><br>Agronomy Research Assistant'),
             CWS  = L.marker([45.3166, -75.6909]).bindPopup('<b>Canadian Wildlife Service</b><br>Wildlife Permits Assistant'),
             MoK  = L.marker([44.2051, -81.5999]).bindPopup('<b>Municipality of Kincardine</b><br>GIS Student'),
-            YR   = L.marker([44.0485, -79.4799]).bindPopup('<b>Regional Municipality of York</b><br>Fleming GIS Collaborative Project');
+            YR   = L.marker([44.0485, -79.4799]).bindPopup('<b>Regional Municipality of York</b><br>Fleming GIS Collaborative Project'),
+            UoG   = L.marker([43.5327, -80.2262]).bindPopup('<b>University of Guelph</b><br>Bachelor of Science in Environmental Sciences<br>Major: Environment & Resource Management'),
+            SSFC   = L.marker([44.3410, -78.7412]).bindPopup('<b>Fleming College</b><br>Graduate Certificate in Geographic Information Systems (GIS)<br>Stream: Applications Specialist');
 
         var workLocations = L.layerGroup([UW, Bio, AAFC, CWS, MoK, YR]);
+        var eduLocations = L.layerGroup([UoG, SSFC]);
 
-        //["<b>University of Guelph</b><br>Bachelor of Science in Environmental Sciences<br>Major: Environment & Resource Management", 43.5327, -80.2262, 2],
-		//["<b>Fleming College</b><br>Graduate Certificate in Geographic Information Systems (GIS)<br>Stream: Applications Specialist", 44.3410, -78.7412, 2]
-		
-		// var map = L.map('map').setView([47.9846, -91.5055], 5);
         var map = L.map('map', {
             center: [47.9846, -91.5055],
             zoom: 5,
-            layers: [workLocations]
+            layers: [workLocations, eduLocations]
         });
 
 		var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
