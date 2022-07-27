@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Leaflet.js Test</title>
+	<title>Leaflet.js Test Ver 2</title>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
@@ -68,9 +68,9 @@
 				.addTo(map);
 			// adjust colour of markers with third suggestion from this thread:
 			// https://stackoverflow.com/questions/23567203/leaflet-changing-marker-color
-			// marker._icon.classList.add("huechange2");
+			// marker._icon.classList.add("huechange");
 
-            // the rough logic:
+            // setting hue change according to type of location - education vs. work experience
             if (locations[i][3] == 1) {
                 marker._icon.classList.add("huechange1");
             } else {
