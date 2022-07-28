@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Leaflet.js Test Ver. 3</title>
+	<title>Leaflet Test Ver. 3</title>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
@@ -50,13 +50,13 @@
 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 		}).addTo(map);
 
-        var overlayMaps = {
+        var overlays = {
             "Experience": workLocations,
             "Education": eduLocations
         };
 
         // null for baseMaps argument ensures multi-select option
-        var layerControl = L.control.layers(null, overlayMaps).addTo(map);
+        var layerControl = L.control.layers(null, overlays).addTo(map);
 
 	</script>
 
