@@ -13,7 +13,7 @@
 	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
 
 	<style>
-		#map { height: 600px; }
+		#map { height: 900px; }
 	</style>
 
 </head>
@@ -35,17 +35,17 @@
             UoG  = L.marker([43.5327, -80.2262]).bindPopup('<b>University of Guelph</b><br>Bachelor of Science in Environmental Sciences<br>Major: Environment & Resource Management'),
             SSFC = L.marker([44.3410, -78.7412]).bindPopup('<b>Fleming College</b><br>Graduate Certificate in Geographic Information Systems (GIS)<br>Stream: Applications Specialist');
 
-        var workLocations = L.layerGroup([UW, Bio, AAFC, CWS, MoK, YR]);
-        var eduLocations = L.layerGroup([UoG, SSFC]);
+        // var workLocations = L.layerGroup([UW, Bio, AAFC, CWS, MoK, YR]);
+        // var eduLocations = L.layerGroup([UoG, SSFC]);
 
         var map = L.map('map', {
-            center: [47.9846, -91.5055],
-            zoom: 5,
-            layers: [workLocations, eduLocations]
+            center: [43.6259, -81.4207],
+            zoom: 9,
+            // layers: [workLocations, eduLocations]
         });
 
 		var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			maxZoom: 10,
+			maxZoom: 19,
 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 		}).addTo(map);
 
