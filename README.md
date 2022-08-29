@@ -1,4 +1,4 @@
-# Adventures in learning to use Leaflet
+# Adventures in learning to work with Leaflet
 
 ## Version 1
 ### Displaying markers for work and education experience
