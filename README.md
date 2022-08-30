@@ -11,6 +11,6 @@
 ### Displaying County of Huron Libraries GeoJSON
 [Ver. 2.1](https://lindsayaldous.github.io/playground/ver2_1.html): All locations symbolized with same hue, no pop-ups
 #### Next versions to attempt:
-- change the default symbology with custom style variable
+- change the default symbology with custom style variable - [need to use pointToLayer function to do this?](https://gis.stackexchange.com/questions/110402/changing-default-style-on-point-geojson-layer-in-leaflet)
 - symbolize with unique colours by Municipality property
 - pop-up to display POI_Name and Full_Address properties
