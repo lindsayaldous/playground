@@ -9,8 +9,8 @@
 
 ## Version 2
 ### Displaying County of Huron Libraries GeoJSON
-[Ver. 2.1](https://lindsayaldous.github.io/playground/ver2_1.html): All locations with default symbols, no pop-ups
+[Ver. 2.1](https://lindsayaldous.github.io/playground/ver2_1.html): All locations with default symbols, no pop-ups  
 [Ver. 2.2](https://lindsayaldous.github.io/playground/ver2_2.html): All locations with custom symbols, no pop-ups
 #### Next versions to attempt:
-- symbolize with unique colours by Municipality property
+- symbolize with unique colours by Municipality property (Ver. 2.3 - work in progress)
 - pop-up to display POI_Name and Full_Address properties
