@@ -64,7 +64,7 @@
         L.geoJSON(geojsonLibraries, {
             style: function(feature) {
                 // is this the right way to call Municipality??
-                switch (feature.properties.Municipality) {
+                switch (features.properties.Municipality) {
                     case 'Bluewater': return {color: "#a6cee3"};
                     case 'Central Huron': return {color: "#1f78b4"};
                     case 'Howick': return {color: "#b2df8a"};
