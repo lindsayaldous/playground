@@ -60,10 +60,10 @@
         };
 
         // how to point switch to the right location to read property??
+        // this is definitely not it:
 
         L.geoJSON(geojsonLibraries, {
             style: function(feature) {
-                // is this the right way to call Municipality??
                 switch (features.properties.Municipality) {
                     case 'Bluewater': return {color: "#a6cee3"};
                     case 'Central Huron': return {color: "#1f78b4"};
