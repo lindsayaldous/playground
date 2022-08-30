@@ -34,7 +34,7 @@
 
 		var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			maxZoom: 17,
-            minZoom: 8,
+            minZoom: 6,
 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 		}).addTo(map);
 
@@ -60,12 +60,12 @@
         };
 
         var geojsonMarkerOptions = {
-            radius: 6,
+            radius: 9,
             fillColor: "#9b1b30",
             color: "#000",
             weight: 1,
             opacity: 1,
-            fillOpacity: 0.7
+            fillOpacity: 0.9
         };
 
         L.geoJSON(geojsonLibraries, {
