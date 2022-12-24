@@ -3,8 +3,8 @@
 ## Version 1
 ### Displaying markers for work and education experience
 [Ver. 1.1](https://lindsayaldous.github.io/playground/ver1_1.html): All locations as markers under same variable and symbolized with same hue  
-[Ver. 1.2](https://lindsayaldous.github.io/playground/ver2_1.html): Type attribute in locations variable & conditional statement to set hue change  
-[Ver. 1.3](https://lindsayaldous.github.io/playground/ver3_1.html): Layer groups for work experience vs. education locations  
+[Ver. 1.2](https://lindsayaldous.github.io/playground/ver1_2.html): Type attribute in locations variable & conditional statement to set hue change  
+[Ver. 1.3](https://lindsayaldous.github.io/playground/ver1_3.html): Layer groups for work experience vs. education locations  
 (includes layer control option but not different coloured markers for different location types)
 
 ## Version 2
